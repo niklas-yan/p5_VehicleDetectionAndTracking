@@ -9,39 +9,19 @@ So eventually, I decided to switch to CNN approach in this project, because I th
 
 Anyway, I still attached the codes for the HOG approach in this repo: [p5_HOG_SVM.py](https://github.com/yulongl/p5_VehicleDetectionAndTracking/blob/master/p5_HOG_SVM.py) trains the Linear SVC and [p5_HOG_test.py](https://github.com/yulongl/p5_VehicleDetectionAndTracking/blob/master/p5_HOG_test.py) implements Hog Sub-sampling Window Search method to test on sample frames. It'll be great if reviewer could help me to figure out how to improve the codes to get better results.  
 
+**This project writeup will introduce the approch of CNN with Keras, instead of HOG feature extraction.**  
 
 ---
+### 1. Training and Testing Data  
 
+The given GTI and KITTI datasets and some extractions from the project video are used for vehicle class. The given 'Extras' dataset is used for nonvehicle class. Traning and testing data are split by the ratio of 0.8:0.2.
 
-### Writeup / README
+### 2. CNN Model Architecture
 
-#### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one.  You can submit your writeup as markdown or pdf.  [Here](https://github.com/udacity/CarND-Vehicle-Detection/blob/master/writeup_template.md) is a template writeup for this project you can use as a guide and a starting point.  
+CNN Model Architecture:  
+![model_1](https://github.com/yulongl/p5_VehicleDetectionAndTracking/blob/master/images/model_1.png)  
 
-You're reading it!  
-
----
-### Histogram of Oriented Gradients (HOG)
-
-#### 1. Explain how (and identify where in your code) you extracted HOG features from the training images.
-
-The code for this step is contained in the first code cell of the IPython notebook (or in lines # through # of the file called `some_file.py`).  
-
-I started by reading in all the `vehicle` and `non-vehicle` images.  Here is an example of one of each of the `vehicle` and `non-vehicle` classes:
-
-![alt text][image1]
-
-I then explored different color spaces and different `skimage.hog()` parameters (`orientations`, `pixels_per_cell`, and `cells_per_block`).  I grabbed random images from each of the two classes and displayed them to get a feel for what the `skimage.hog()` output looks like.
-
-Here is an example using the `YCrCb` color space and HOG parameters of `orientations=8`, `pixels_per_cell=(8, 8)` and `cells_per_block=(2, 2)`:
-
-
-![alt text][image2]
-
-#### 2. Explain how you settled on your final choice of HOG parameters.
-
-I tried various combinations of parameters and...
-
-#### 3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
+### 3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
 
 I trained a linear SVM using...
 
