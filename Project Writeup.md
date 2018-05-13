@@ -3,25 +3,15 @@
 ---
 ## Some Words at Beginning  
 
-I know the main goal of this project is using the HOG features approach to train a classifier. However, I had been working on this approach for the whole week and couldn't get a good result. I tried different combanitions of parameters including 'orient', 'pix_per_cell', color space and etc., but none of them gave me a clean and accurate pridiction on test images, even though I always got 98% to 99% test accuracy when training the classifier. I also suspect that the Hog Sub-sampling Window Search method may distort the window image, so the window feature may not be very clean. I even tried suggestions mentioned in the forum to use confidence score over 99% confidence and played around with the heat map, but still getting too many false positives and partially detected vehicles.
+I know the main goal of this project is using the HOG features approach to train a classifier. However, I had been working on this approach for the whole week and couldn't get a good result. I tried different combanitions of parameters including 'orient', 'pix_per_cell', color space and etc., but none of them gave me a clean and accurate pridiction on test images, even though I always got 98% to 99% test accuracy when training the classifier. I also suspect that the Hog Sub-sampling Window Search method may distort the window image, so the window feature may not be very clean. I even tried suggestions mentioned in the forum to use confidence score over 99% confidence and played around with the heat map, but still getting too many false positives and partially detected vehicles.  
+
+So eventually, I decided to switch to CNN approach in this project, because I think the performance of CNN is much better than HOG - fewer false positives and more accurate predictions.  
+
+Anyway, I still attached the codes for the HOG approach in this repo: [p5_HOG_SVM.py](https://github.com/yulongl/p5_VehicleDetectionAndTracking/blob/master/p5_HOG_SVM.py) trains the Linear SVC and [p5_HOG_test.py](https://github.com/yulongl/p5_VehicleDetectionAndTracking/blob/master/p5_HOG_test.py) implements Hog Sub-sampling Window Search method to test on sample frames. It'll be great if reviewer could help me to figure out how to improve the codes to get better results.  
+
 
 ---
-## Goals  
 
-* Perform a Histogram of Oriented Gradients (HOG) feature extraction on a labeled training set of images and train a classifier Linear SVM classifier
-* Optionally, you can also apply a color transform and append binned color features, as well as histograms of color, to your HOG feature vector. 
-* Note: for those first two steps don't forget to normalize your features and randomize a selection for training and testing.
-* Implement a sliding-window technique and use your trained classifier to search for vehicles in images.
-* Run your pipeline on a video stream (start with the test_video.mp4 and later implement on full project_video.mp4) and create a heat map of recurring detections frame by frame to reject outliers and follow detected vehicles.
-* Estimate a bounding box for vehicles detected.
-
-
----  
-
-## Rubric Points
-
-I will consider the [rubric points](https://review.udacity.com/#!/rubrics/513/view) individually and describe how I addressed each point in my implementation.  
----
 
 ### Writeup / README
 
