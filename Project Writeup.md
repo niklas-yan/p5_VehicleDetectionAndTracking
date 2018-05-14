@@ -75,7 +75,7 @@ Class HotMap is used to store the past 10 box list which are predicted as a vehi
 
 The first problem I have is, I don't really understand the advantage of HOG features extraction, performance wise. Maybe speed wise it's better than heavy CNN approach, though I still get around 8000 features for HOG and other histogram combination. However, the thing is, I cannot accept the performance of the HOG approach, which generates too many false positives, even after I tried tuning the confidence scores, many combinations of HOG parameters and differenc classifier kernals.  
 
-Comparing to HOG, CNN is much easier to implement and the performance is way better. The only few false positives I got are from the opposite direction vehicles coming by, which maybe not a bad thing. Speed wise, it's not that slower than HOG, considering a small step size and 3 sliding window sizes. I'm sure if I work more on simplifying the struction of the CNN model, it could be even faster.  
+Comparing to HOG, CNN is much easier to implement and the performance is way better. The only few false positives I got are from the opposite direction vehicles coming by, which maybe not a bad thing. Speed wise, it's not that slower than HOG, considering a small step size and 3 sliding window sizes. I'm sure if I work more on simplifying the structure of the CNN model, it could be even faster.  
 
 #### 2. Overlapped vehicles  
 
@@ -83,6 +83,6 @@ When the black car and the white car overlapped with each other, it combines int
 
 #### 3. Smooth tracking  
 
-I think the tracking is still not smooth enough. Some work on the final predicted boxes after the hot map process may work.  
+I think the tracking box is still not smooth enough. Some work on the final predicted boxes after the hot map process may work.  
 
 
