@@ -67,6 +67,10 @@ Heat map and final result:
 
 Class HotMap is used to store the past 10 box list which are predicted as a vehicle. For every frame prediction, it adds up the past 10 box lists and the current box list to make the heap map. A threshold of 28 is used to make the final prediction.
 
+#### 3. Example  
+
+![demo](https://github.com/yulongl/p5_VehicleDetectionAndTracking/blob/master/images/demo.gif)  
+
 ---
 
 ### Discussion
