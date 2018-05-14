@@ -15,6 +15,7 @@ Anyway, I still attached the codes for the HOG approach in this repo: [p5_HOG_SV
 ### Model Training  
 
 [p5_CNN.py](https://github.com/yulongl/p5_VehicleDetectionAndTracking/blob/master/p5_CNN.py) shows the CNN training and testing process with Keras.  
+[model_1.h5](https://github.com/yulongl/p5_VehicleDetectionAndTracking/blob/master/model_1.h5) is the trained model.  
 
 #### 1. Training and Testing Data  
 
@@ -35,7 +36,9 @@ Test loss = 0.0112
 
 ---  
 
-### Sliding Window Search on Sample Frame Images
+### Sliding Window Search on Sample Frame Images  
+
+[p5_CNN_search_win.py](https://github.com/yulongl/p5_VehicleDetectionAndTracking/blob/master/p5_CNN_search_win.py) describes window searching process on test images.   
 
 #### 1. Sliding window search
 
@@ -52,6 +55,8 @@ Heat map and final result:
 ---
 
 ### Video Implementation
+
+[p5_CNN_video.py](https://github.com/yulongl/p5_VehicleDetectionAndTracking/blob/master/p5_CNN_video.py) shows the process of tracking vehilces in a video.  
 
 #### 1. Link to the final video output
 
