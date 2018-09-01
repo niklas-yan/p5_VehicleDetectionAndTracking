@@ -1,6 +1,11 @@
 # Vehicle Detection and Tracking
 ### Yulong Li  
----
+
+---  
+
+## Demo  
+![demo](https://github.com/yulongl/p5_VehicleDetectionAndTracking/blob/master/images/demo.gif)  
+
 ## Some Words at Beginning  
 
 I know the main goal of this project is using the HOG features approach to train a classifier. However, I had been working on this approach for the whole week and couldn't get a good result. I tried different combanitions of parameters including 'orient', 'pix_per_cell', color space and etc., but none of them gave me a clean and accurate pridiction on test images, even though I always got 98% to 99% test accuracy when training the classifier. I also suspect that the Hog Sub-sampling Window Search method may distort the window image, so the window feature may not be very clean. I even tried suggestions mentioned in the forum to use confidence score over 99% confidence and played around with the heat map, but still getting too many false positives and partially detected vehicles.  
